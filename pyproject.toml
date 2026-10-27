@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "salestongue"
+version = "0.1.0"
+description = "AI sales-talk toolkit for small merchants: short-video scripts, livestream talk tracks and customer Q&A from industry packs. 为小商家生成短视频脚本、直播话术与客户问答的销售话术工具。"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "jacelovehaha" }]
+keywords = ["sales-scripts", "livestream", "ecommerce", "short-video", "small-business", "话术", "直播", "短视频"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Office/Business",
+]
+
+[project.scripts]
+salestongue = "salestongue.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+salestongue = ["packs/*.json"]
